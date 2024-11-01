@@ -1,30 +1,16 @@
-import { View, Text, TouchableHighlight } from 'react-native'
+import { Text, TouchableHighlight } from 'react-native'
 import React from 'react'
 
-const Button = ({ title, style, onPress }) => {
-
-    const styles = {
-        btn: {
-            backgroundColor: "rgb(233, 233, 13)",
-            width: 220,
-            paddingVertical: 8,
-            borderRadius: 7,
-            ...style
-        },
-        text: {
-            textAlign: 'center',
-            fontSize: 14,
-            fontWeight: 500,
-        }
-    }
+const Button = ({ title, style, onPress, bg = "bg-yellow-300", color = "", hover = "#caca18" }) => {
 
     return (
         <TouchableHighlight
-            underlayColor={"rgb(210, 210, 13)"}
+            className={`${bg} rounded-lg py-2 ${style}`}
+            underlayColor={hover}
             onPress={onPress}
-            style={styles.btn}
+            // style={{ backgroundColor: "#e9e90d" }}
         >
-            <Text style={styles.text}>{title}</Text>
+            <Text className={`text-center text-sm font-medium ${color}`}>{title}</Text>
         </TouchableHighlight>
     )
 }

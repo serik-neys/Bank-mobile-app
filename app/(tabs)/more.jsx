@@ -1,11 +1,13 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import Faq from '../../components/FAQ'
+import Padding from '../../components/UI/Padding'
 
 const More = () => {
   return (
-    <View>
-      <Text>More</Text>
-    </View>
+    <Padding>
+      <Faq/>
+    </Padding>
   )
 }
 

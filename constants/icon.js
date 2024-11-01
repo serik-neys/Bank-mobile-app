@@ -1,0 +1,1 @@
+export const ICON_COLOR = "#5bdc5b"

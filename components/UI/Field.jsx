@@ -1,22 +1,13 @@
 import { TextInput } from 'react-native'
 import React from 'react'
 
-const Field = ({ style = {}, onChangeText, placeholder, value }) => {
-
-    const styles = {
-        paddingVertical: 7,
-        paddingHorizontal: 15,
-        width: 220,
-        backgroundColor: "rgb(260, 260, 260)",
-        borderRadius: 8,
-        ...style
-    }
+const Field = ({ style, onChangeText, placeholder, value }) => {
 
     return (
         <>
             <TextInput
             
-                style={styles}
+               className={`bg-white py-2 px-4 rounded-lg ${style}`}
                 onChangeText={onChangeText}
                 placeholder={placeholder}
                 value={value}
